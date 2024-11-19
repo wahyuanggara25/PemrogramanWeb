@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomor 4</title>
+</head>
+
+<body>
+    <FORM NAME="fform">
+        <H1><BR>Memasukkan Data Lewat Keyboard</H1>
+        <PRE>
+    Bilangan a :<input type="text" size="11" name="bilanganA">
+    Bilangan b :<input type="text" size="11" name="bilanganB">
+    Bilangan c :<input type="text" size="11" name="bilanganC">
+    </PRE>
+        <P>
+            <INPUT TYPE="button" value="Proses" onclick="proses()">
+            <INPUT TYPE="reset" value="Ulang">
+    </FORM>
+
+    <SCRIPT lang="JavaScript">
+        function proses() {
+            var a = parseInt(document.fform.bilanganA.value);
+            var b = parseInt(document.fform.bilanganB.value);
+            var c = parseInt(document.fform.bilanganC.value);
+            if (a < b || a <= c && b > c) {
+                d = a * c - b;
+                alert(d);
+                return false;
+            } else
+            if (a > b && b <= c || a > c) {
+                d = a * b - c;
+                alert(d);
+                return false;
+            } else
+            if (a > b && b > c || a < c) {
+                d = c * b + a;
+                alert(d);
+                return false;
+            }
+        }
+    </SCRIPT>
+</body>
+
+</html>
